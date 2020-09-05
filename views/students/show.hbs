@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>uid</th>
+    <th>name</th>
+    <th>registraion</th>
+    <th>expire</th>
+    <th>url</th>
+    <th>mail</th>
+     <th>web</th>
+    <th>contact</th>
+     <th>edit</th>
+    <th>delete</th>
+  </tr>
+  {{#each details}}
+  <tr>
+    <td>{{uid}}</td>
+    <td>{{name}}</td>
+    <td>{{formatDate registraion 'MMMM Do YYYY,h:mm:ss a'}}</td>
+    <td>{{formatDate expire 'MMMM Do YYYY,h:mm:ss a'}}</td>
+    <td>{{url}}</td>
+    <td>{{mail}}</td>
+    <td>{{web}}</td>
+    <td>{{contact}}</td>
+ <td><a href="/editDetails/{{uid}}"><i>edit</i></a></td>
+    <td><a href="/delete/{{uid}}"><i>delete</i></a></td>
+  </tr>
+  {{/each}}
+</table>
+</body>
+</html>

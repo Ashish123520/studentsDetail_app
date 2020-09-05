@@ -1,0 +1,39 @@
+<form action="/editDetails/{{details.uid}}" method="POST" style="border:1px solid #ccc">
+<input type="hidden" name="_method" value="PUT">
+  <div class="container">
+    <h1>edit details</h1>
+
+    <label for="uid"><b>uid</b></label>
+  <input type="text" id="uid" name="uid" value="{{details.uid}}">
+
+    <label for="name"><b>name</b></label>
+    <input type="text" id="name" name="name" value="{{details.name}}">
+
+      <label for="registration"><b>registration</b></label>
+    <input type="date" id="registration" name="registration" value="{{details.registration}}">
+
+    <label for="expire"><b>expire</b></label>
+    <input type="date" id="expire" name="expire" value="{{details.expire}}">
+
+<label for="url"><b>url</b></label>
+    <input type="url" id="url" name="url" value="{{details.url}}">
+
+    <label for="student"><b>student</b></label>
+    <input type="text" id="student" name="student" value="{{details.student}}">
+
+    <label for="mail"><b>mail</b></label>
+    <input type="text" id="mail" name="mail" value="{{details.mail}}">
+
+    <label for="web"><b>web</b></label>
+    <input type="text" id="web" name="web" value="{{details.web}}">
+
+    <label for="contact"><b>contact</b></label>
+    <input type="text" id="contact" name="contact" value="{{details.contact}}">
+  
+
+    <div class="clearfix">
+    <a href="/dashboard" class="btn orange">Cancel</a>
+      <input type="submit" value="Save" class="btn">
+    </div>
+  </div>
+</form>
